@@ -3,9 +3,14 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class CameraControl : MonoBehaviour {
+    
+    bool moving = false;
+    FocusTarget target;
 
-    public GameObject target;
-    Vector3 destiny;
+    void Awake() {
+        GameManager.cam = this.GetComponent<CameraControl>();
+    }
+
 	// Use this for initialization
 	void Start () {
 		
@@ -13,7 +18,14 @@ public class CameraControl : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        destiny = (Camera.main.ScreenToWorldPoint(Input.mousePosition) - this.transform.position).normalized * 100.0f;
-        target.transform.localPosition = Vector3.Lerp(target.transform.position, destiny, 0.2f);
+        if (moving && this.transform.position != target.transform.position + target.offset)
+            this.transform.position = Vector3.Lerp(this.transform.position, target.transform.position + target.offset, 0.3f);
+        else
+            moving = false;
 	}
+
+    public void changeTarget(FocusTarget t) {
+        moving = true;
+        target = t;
+    }
 }
