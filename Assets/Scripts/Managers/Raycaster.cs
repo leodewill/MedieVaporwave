@@ -29,9 +29,18 @@ public class Raycaster : MonoBehaviour {
         if (clickable != null) {
             if (Input.GetMouseButtonDown(0)) {
                 clickable.OnClick(0);
+                clickable.isDragging = true;
             }
             if (Input.GetMouseButtonDown(1)) {
                 clickable.OnClick(1);
+            }
+
+            if (clickable.isDragging) {
+                clickable.OnDrag();
+                if (Input.GetMouseButtonUp(0)) {
+                    clickable.isDragging = false;
+                    clickable.OnDrop();
+                }
             }
 
         }
