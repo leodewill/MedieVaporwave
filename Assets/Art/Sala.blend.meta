@@ -1,0 +1,196 @@
+fileFormatVersion: 2
+guid: 53437e0440f72cb4cb67527eca15f0da
+timeCreated: 1524346998
+licenseType: Free
+ModelImporter:
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: Armario
+    100002: Bau_Corpo
+    100004: Bau_Tampa
+    100006: Chao
+    100008: Parede_Janela
+    100010: Parede_Lateral_Direita
+    100012: Parede_Lateral_Esquerda
+    100014: Parede_Porta
+    100016: Porta
+    100018: //RootNode
+    100020: Tecla
+    100022: Tecla_001
+    100024: Tecla_002
+    100026: Tecla_003
+    100028: Tecla_004
+    100030: Tecla_005
+    100032: Tecla_006
+    100034: Tecla_007
+    100036: Tecla_008
+    100038: Teclado
+    400000: Armario
+    400002: Bau_Corpo
+    400004: Bau_Tampa
+    400006: Chao
+    400008: Parede_Janela
+    400010: Parede_Lateral_Direita
+    400012: Parede_Lateral_Esquerda
+    400014: Parede_Porta
+    400016: Porta
+    400018: //RootNode
+    400020: Tecla
+    400022: Tecla_001
+    400024: Tecla_002
+    400026: Tecla_003
+    400028: Tecla_004
+    400030: Tecla_005
+    400032: Tecla_006
+    400034: Tecla_007
+    400036: Tecla_008
+    400038: Teclado
+    2100000: Metal
+    2100002: Madeira
+    2100004: Madeira__KeyboardTexture
+    2100006: Madeira__KeyTextureA_png
+    2100008: unnamed
+    2300000: Armario
+    2300002: Bau_Corpo
+    2300004: Bau_Tampa
+    2300006: Chao
+    2300008: Parede_Janela
+    2300010: Parede_Lateral_Direita
+    2300012: Parede_Lateral_Esquerda
+    2300014: Parede_Porta
+    2300016: Porta
+    2300018: Tecla
+    2300020: Tecla_001
+    2300022: Tecla_002
+    2300024: Tecla_003
+    2300026: Tecla_004
+    2300028: Tecla_005
+    2300030: Tecla_006
+    2300032: Tecla_007
+    2300034: Tecla_008
+    2300036: Teclado
+    3300000: Armario
+    3300002: Bau_Corpo
+    3300004: Bau_Tampa
+    3300006: Chao
+    3300008: Parede_Janela
+    3300010: Parede_Lateral_Direita
+    3300012: Parede_Lateral_Esquerda
+    3300014: Parede_Porta
+    3300016: Porta
+    3300018: Tecla
+    3300020: Tecla_001
+    3300022: Tecla_002
+    3300024: Tecla_003
+    3300026: Tecla_004
+    3300028: Tecla_005
+    3300030: Tecla_006
+    3300032: Tecla_007
+    3300034: Tecla_008
+    3300036: Teclado
+    4300000: Bau_Corpo
+    4300002: Teclado
+    4300004: Tecla_008
+    4300006: Tecla_007
+    4300008: Tecla_006
+    4300010: Tecla_005
+    4300012: Tecla_004
+    4300014: Tecla_003
+    4300016: Tecla_002
+    4300018: Tecla_001
+    4300020: Tecla
+    4300022: Bau_Tampa
+    4300024: Armario
+    4300026: Parede_Lateral_Esquerda
+    4300028: Parede_Porta
+    4300030: Parede_Lateral_Direita
+    4300032: Chao
+    4300034: Porta
+    4300036: Parede_Janela
+    7400000: Default Take
+    9500000: //RootNode
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: unnamed
+    second: {fileID: 2100000, guid: 09959645259c7284180c64e4865a6857, type: 2}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

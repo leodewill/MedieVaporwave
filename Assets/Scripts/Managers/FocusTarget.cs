@@ -32,5 +32,7 @@ public class FocusTarget : Clickable {
             GameManager.cam.changeTarget(this);
         else if (mouseButton == 1)
             GameManager.cam.changeTarget(main);
+
+        Debug.Log("Click");
     }
 }

@@ -26,11 +26,9 @@ public class CameraControl : MonoBehaviour {
 	}
 
     public void changeTarget(FocusTarget t) {
-        if (target != t) {
-            target.haveFocus = false;
-            moving = true;
-            target = t;
-            target.haveFocus = true;
-        }
+        target.haveFocus = false;
+        moving = true;
+        target = t;
+        target.haveFocus = true;
     }
 }
