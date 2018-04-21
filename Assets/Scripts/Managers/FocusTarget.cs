@@ -5,13 +5,16 @@ using UnityEngine;
 public class FocusTarget : Clickable {
 
     public bool isMain;
+    public bool haveFocus = false;
     public static FocusTarget main;
 
     public Vector3 offset;
 
     void Awake () {
-        if (isMain)
+        if (isMain) {
             main = this.GetComponent<FocusTarget>();
+            haveFocus = true;
+        }
     }
 
 	// Use this for initialization
@@ -25,12 +28,9 @@ public class FocusTarget : Clickable {
 	}
 
     public override void OnClick(int mouseButton) {
-        if (mouseButton == 0) {
+        if (mouseButton == 0)
             GameManager.cam.changeTarget(this);
-            Debug.Log("Foco");
-        }else if (mouseButton == 1) {
+        else if (mouseButton == 1)
             GameManager.cam.changeTarget(main);
-            Debug.Log("Volta");
-        }
     }
 }

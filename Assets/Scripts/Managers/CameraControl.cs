@@ -9,6 +9,7 @@ public class CameraControl : MonoBehaviour {
 
     void Awake() {
         GameManager.cam = this.GetComponent<CameraControl>();
+        target = FocusTarget.main;
     }
 
 	// Use this for initialization
@@ -25,7 +26,11 @@ public class CameraControl : MonoBehaviour {
 	}
 
     public void changeTarget(FocusTarget t) {
-        moving = true;
-        target = t;
+        if (target != t) {
+            target.haveFocus = false;
+            moving = true;
+            target = t;
+            target.haveFocus = true;
+        }
     }
 }
