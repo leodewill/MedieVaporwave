@@ -19,7 +19,9 @@ public class FocusTarget : Clickable {
 
 	// Use this for initialization
 	void Start () {
-		
+        MeshRenderer mr = this.GetComponent<MeshRenderer>();
+        if (mr != null)
+            mr.enabled = false;
 	}
 	
 	// Update is called once per frame
