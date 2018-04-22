@@ -5,6 +5,7 @@ using UnityEngine;
 public class Chest : Interactable {
 
     public LockPickable lockScript;
+    public Animator tampa;
 
     void Awake() {
         lockScript = this.GetComponent<LockPickable>();
@@ -20,5 +21,9 @@ public class Chest : Interactable {
 
     public override void OnLocked() {
         lockScript.TryUnlock();
+    }
+
+    public override void Interact() {
+        tampa.SetTrigger("Move");
     }
 }
