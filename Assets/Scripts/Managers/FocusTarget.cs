@@ -13,6 +13,7 @@ public class FocusTarget : Clickable {
     void Awake () {
         if (isMain) {
             main = this.GetComponent<FocusTarget>();
+            Debug.Log("Main");
             haveFocus = true;
         }
     }

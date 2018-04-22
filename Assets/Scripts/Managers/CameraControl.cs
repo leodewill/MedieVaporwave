@@ -7,15 +7,11 @@ public class CameraControl : MonoBehaviour {
     bool moving = false;
     FocusTarget target;
 
-    void Awake() {
+	// Use this for initialization
+	void Start () {
         GameManager.cam = this.GetComponent<CameraControl>();
         target = FocusTarget.main;
     }
-
-	// Use this for initialization
-	void Start () {
-		
-	}
 	
 	// Update is called once per frame
 	void Update () {

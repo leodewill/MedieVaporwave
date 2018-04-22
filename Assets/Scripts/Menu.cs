@@ -35,4 +35,16 @@ public class Menu : MonoBehaviour {
         Clear();
         tab.SetActive(true);
     }
+
+    public void Pause(GameObject menu) {
+        Clear();
+        tabs[0].SetActive(true);
+        menu.SetActive(true);
+        Time.timeScale = 0.0f;
+    }
+
+    public void Resume(GameObject menu) {
+        menu.SetActive(false);
+        Time.timeScale = 1.0f;
+    }
 }
