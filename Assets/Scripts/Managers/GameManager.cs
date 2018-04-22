@@ -6,8 +6,17 @@ public class GameManager : MonoBehaviour {
     public static GameManager instance;
     public static CameraControl cam;
     public static bool paused = false;
+    [Space(10)]
+    public int lockpickLvl = 0;
     Menu menu;
     public GameObject menuInGame;
+
+    void Awake() {
+        if (instance == null)
+            instance = this;
+        else
+            Destroy(this.gameObject);
+    }
 
 	// Use this for initialization
 	void Start () {

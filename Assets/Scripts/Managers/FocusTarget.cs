@@ -7,7 +7,7 @@ public class FocusTarget : Clickable {
     public bool isMain;
     public bool haveFocus = false;
     public static FocusTarget main;
-
+    public Interactable item;
     public Vector3 offset;
 
     void Awake () {
@@ -31,11 +31,14 @@ public class FocusTarget : Clickable {
 	}
 
     public override void OnClick(int mouseButton) {
-        if (mouseButton == 0)
+        if (mouseButton == 0 && !haveFocus) {
             GameManager.cam.changeTarget(this);
-        else if (mouseButton == 1)
+            if(item != null)
+                item.Touch();
+        } else if (mouseButton == 1 && haveFocus) {
             GameManager.cam.changeTarget(main);
-
-        Debug.Log("Click");
+            if (item != null)
+                item.Left();
+        }
     }
 }
