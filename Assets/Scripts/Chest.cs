@@ -6,11 +6,14 @@ public class Chest : Interactable {
 
     public LockPickable lockScript;
     public Animator tampa;
+    public Animator cadeado, ferro;
 
     void Awake() {
         lockScript = this.GetComponent<LockPickable>();
         if (lockScript != null)
             lockScript.item = this;
+
+        locked = true;
     }
 
 	// Use this for initialization
@@ -20,10 +23,18 @@ public class Chest : Interactable {
 	void Update () { }
 
     public override void OnLocked() {
-        lockScript.TryUnlock();
+        lockScript.TryUnlock(cadeado);
+    }
+
+    public override void OnUnlock() {
+        
     }
 
     public override void Interact() {
-        tampa.SetTrigger("Move");
+        tampa.SetTrigger("Open");
+    }
+
+    public override void Close() {
+        tampa.SetTrigger("Close");
     }
 }

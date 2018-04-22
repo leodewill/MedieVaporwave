@@ -13,7 +13,6 @@ public class FocusTarget : Clickable {
     void Awake () {
         if (isMain) {
             main = this.GetComponent<FocusTarget>();
-            Debug.Log("Main");
             haveFocus = true;
         }
     }
@@ -31,9 +30,11 @@ public class FocusTarget : Clickable {
 	}
 
     public override void OnClick(int mouseButton) {
-        if (mouseButton == 0 && !haveFocus) {
-            GameManager.cam.changeTarget(this);
-            if(item != null)
+        if (mouseButton == 0) {
+            if (!haveFocus) 
+                GameManager.cam.changeTarget(this);
+
+            if (item != null)
                 item.Touch();
         } else if (mouseButton == 1 && haveFocus) {
             GameManager.cam.changeTarget(main);
