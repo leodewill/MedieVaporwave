@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class LockPick : MonoBehaviour {
+public class LockPick : Clickable {
 
 	// Use this for initialization
 	void Start () {
@@ -13,4 +13,11 @@ public class LockPick : MonoBehaviour {
 	void Update () {
 		
 	}
+
+    public override void OnClick(int mouseButton) {
+        if (mouseButton == 0) {
+            GameManager.instance.lockpickLvl = 1;
+            Destroy(this.gameObject);
+        }
+    }
 }

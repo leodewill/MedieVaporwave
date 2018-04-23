@@ -16,8 +16,10 @@ public class Fist : MonoBehaviour {
     void Start () {
         aesthetics.SetActive(false);
         black.gameObject.SetActive(false);
-        if (!GameManager.instance.cutscene)
+        if (!GameManager.instance.cutscene) {
             bottle.letOnTable();
+            hand.GetComponent<BoxCollider>().enabled = false;
+        }
     }
 
 	// Update is called once per frame
@@ -49,6 +51,7 @@ public class Fist : MonoBehaviour {
         bottle.letOnTable();
         hand.SetBool("Holding", false);
         black.gameObject.SetActive(true);
+        hand.GetComponent<BoxCollider>().enabled = false;
         GameManager.instance.cam.changeTarget(FocusTarget.main);
     }
 
