@@ -1,0 +1,16 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!221 &22100000
+AnimatorOverrideController:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: PaintCadeado
+  m_Controller: {fileID: 9100000, guid: 2cde255bd756d4849883fd9e4d4677e1, type: 2}
+  m_Clips:
+  - m_OriginalClip: {fileID: 7400000, guid: 0128fcf9e02efbf48b70feabb3addaa6, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 9c13d7fdcb6284e4e85ece07999475b6, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 041e67f36cf1b444281516562682a418, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 540c2285d69ee2e46af82974ac74117d, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: eec350b62ee089f4fbedefb24cb823e3, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 14fea9a47d080e9488ab9cc51d365418, type: 2}

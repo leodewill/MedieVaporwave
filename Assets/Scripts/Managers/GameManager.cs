@@ -7,8 +7,11 @@ public class GameManager : MonoBehaviour {
     public static GameManager instance;
     public CameraControl cam;
     public static bool paused = false;
+    public Light[] lights;
+    public Color[] colors;
     [Space(10)]
     public int lockpickLvl = 0;
+    public int diskLvl = 0;
     Menu menu;
     public GameObject menuInGame;
     public Animator fist;
@@ -20,6 +23,11 @@ public class GameManager : MonoBehaviour {
             Destroy(this.gameObject);
 
         if (cutscene) {
+            for (int i = 0; i < lights.Length/2; i++) {
+                lights[2 * i].color = colors[8];
+                lights[2 * i + 1].color = colors[9];
+            }
+
             cam.GetComponent<Raycaster>().enabled = false;
             cam.GetComponent<FreeLookCam>().enabled = false;
         } else
@@ -44,6 +52,11 @@ public class GameManager : MonoBehaviour {
             paused = !paused;
         }
 	}
+
+    public void changeLights() {
+        for (int i = 0; i < lights.Length; i++)
+            lights[i].color = colors[i];
+    }
 
     public void startGame() {
         cam.GetComponent<Raycaster>().enabled = true;

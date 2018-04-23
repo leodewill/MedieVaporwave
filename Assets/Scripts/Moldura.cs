@@ -2,11 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Chest : Interactable {
+public class Moldura : Interactable {
 
     public LockPickable lockScript;
-    public Animator tampa;
-    public Animator cadeado, ferro;
+    public Animator cadeado;
 
     void Awake() {
         lockScript = this.GetComponent<LockPickable>();
@@ -16,11 +15,11 @@ public class Chest : Interactable {
         locked = true;
     }
 
-	// Use this for initialization
-	void Start () { }
-	
-	// Update is called once per frame
-	void Update () { }
+    // Use this for initialization
+    void Start () { }
+
+    // Update is called once per frame
+    void Update() { }
 
     public override void OnLocked() {
         lockScript.TryUnlock(cadeado);
@@ -31,10 +30,8 @@ public class Chest : Interactable {
     }
 
     public override void Interact() {
-        tampa.SetTrigger("Open");
     }
 
     public override void Close() {
-        tampa.SetTrigger("Close");
     }
 }

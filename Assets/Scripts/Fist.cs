@@ -60,6 +60,7 @@ public class Fist : MonoBehaviour {
     }
 
     public void OpenEyes() {
+        GameManager.instance.changeLights();
         clear = true;
         GameManager.instance.startGame();
     }
