@@ -8,7 +8,7 @@ public class FocusTarget : Clickable {
     public bool haveFocus = false;
     public static FocusTarget main;
     public Interactable item;
-    public Vector3 offset;
+    public Vector3 offset, ajust;
 
     void Awake () {
         if (isMain) {
