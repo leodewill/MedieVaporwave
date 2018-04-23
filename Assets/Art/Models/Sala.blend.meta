@@ -52,6 +52,8 @@ ModelImporter:
     2100008: unnamed
     2100010: Parede
     2100012: Chao
+    2100014: Hidden
+    2100016: Parede__ParedeFrenteTextura_png
     2300000: Armario
     2300002: Bau_Corpo
     2300004: Bau_Tampa

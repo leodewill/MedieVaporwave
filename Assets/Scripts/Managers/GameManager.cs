@@ -10,7 +10,9 @@ public class GameManager : MonoBehaviour {
     public int lockpickLvl = 0;
     Menu menu;
     public GameObject menuInGame;
-
+    public Animator hand;
+    public bool canPlay = false;
+    public FocusTarget mesa;
     void Awake() {
         if (instance == null)
             instance = this;
@@ -22,6 +24,8 @@ public class GameManager : MonoBehaviour {
 	void Start () {
         menu = this.GetComponent<Menu>();
         menuInGame.SetActive(false);
+        hand.SetBool("Holding", true);
+        //cam.changeTarget(mesa);
 	}
 	
 	// Update is called once per frame
