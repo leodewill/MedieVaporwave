@@ -6,6 +6,7 @@ public class Moldura : Interactable {
 
     public LockPickable lockScript;
     public Animator cadeado;
+    public Mesa mesa;
 
     void Awake() {
         lockScript = this.GetComponent<LockPickable>();
@@ -27,6 +28,7 @@ public class Moldura : Interactable {
 
     public override void OnUnlock() {
         Invoke("Interact", 1.0f);
+        mesa.turnOn();
     }
 
     public override void Interact() {
