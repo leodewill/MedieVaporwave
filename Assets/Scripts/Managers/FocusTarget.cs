@@ -32,12 +32,12 @@ public class FocusTarget : Clickable {
     public override void OnClick(int mouseButton) {
         if (mouseButton == 0) {
             if (!haveFocus) 
-                GameManager.cam.changeTarget(this);
+                GameManager.instance.cam.changeTarget(this);
 
             if (item != null)
                 item.Touch();
         } else if (mouseButton == 1 && haveFocus) {
-            GameManager.cam.changeTarget(main);
+            GameManager.instance.cam.changeTarget(main);
             if (item != null)
                 item.Left();
         }

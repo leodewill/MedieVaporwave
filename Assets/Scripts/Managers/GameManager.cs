@@ -1,31 +1,36 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityStandardAssets.Cameras;
 
 public class GameManager : MonoBehaviour {
     public static GameManager instance;
-    public static CameraControl cam;
+    public CameraControl cam;
     public static bool paused = false;
     [Space(10)]
     public int lockpickLvl = 0;
     Menu menu;
     public GameObject menuInGame;
-    public Animator hand;
-    public bool canPlay = false;
-    public FocusTarget mesa;
+    public Animator fist;
+    public bool cutscene;
     void Awake() {
         if (instance == null)
             instance = this;
         else
             Destroy(this.gameObject);
+
+        if (cutscene) {
+            cam.GetComponent<Raycaster>().enabled = false;
+            cam.GetComponent<FreeLookCam>().enabled = false;
+        } else
+            fist.enabled = false;
+      
     }
 
 	// Use this for initialization
 	void Start () {
         menu = this.GetComponent<Menu>();
         menuInGame.SetActive(false);
-        hand.SetBool("Holding", true);
-        //cam.changeTarget(mesa);
 	}
 	
 	// Update is called once per frame
@@ -39,4 +44,9 @@ public class GameManager : MonoBehaviour {
             paused = !paused;
         }
 	}
+
+    public void startGame() {
+        cam.GetComponent<Raycaster>().enabled = true;
+        cam.GetComponent<FreeLookCam>().enabled = true;
+    }
 }
