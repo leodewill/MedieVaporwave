@@ -35,6 +35,7 @@ public class Moldura : Interactable {
         if (GameManager.instance.diskLvl >= lvl) {
             mesa.turnOn();
             GameManager.instance.diskLvl++;
+            GameManager.instance.refreshMusic();
             disk.fly();
         }
     }

@@ -15,9 +15,11 @@ public class GameManager : MonoBehaviour {
     public int diskLvl = 0;
     Menu menu;
     public GameObject menuInGame, gate;
-    public Animator fist;
+    public Animator fist, sala;
     public bool cutscene;
 
+    public MusicProgression music;
+    int stage = 0;
     void Awake() {
         if (instance == null)
             instance = this;
@@ -56,6 +58,10 @@ public class GameManager : MonoBehaviour {
         }
 	}
 
+    public void refreshMusic(){
+        stage++;
+        music.stage = stage;
+    }
     public void changeLights() {
         for (int i = 0; i < lights.Length; i++)
             lights[i].color = colors[i];

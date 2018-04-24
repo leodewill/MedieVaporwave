@@ -17,6 +17,7 @@ public class LockPick : Clickable {
     public override void OnClick(int mouseButton) {
         if (mouseButton == 0) {
             GameManager.instance.lockpickLvl++;
+            GameManager.instance.refreshMusic();
             Destroy(this.gameObject);
         }
     }

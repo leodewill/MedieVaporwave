@@ -5,10 +5,10 @@ using UnityEngine;
 public class Gaveta : Clickable {
 
     public int lvl;
-    public GameObject janela;
+    public SpriteRenderer janela;
 	// Use this for initialization
 	void Start () {
-        janela.SetActive(false);
+        janela.color = Color.black;
 	}
 	
 	// Update is called once per frame
@@ -18,7 +18,7 @@ public class Gaveta : Clickable {
 
     public override void OnClick(int mouseButton) {
         if (mouseButton == 0) {
-            janela.SetActive(true);
+            janela.color = Color.white;
             this.GetComponent<BoxCollider>().enabled = false;
         }
         

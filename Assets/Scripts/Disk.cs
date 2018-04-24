@@ -17,6 +17,7 @@ public class Disk : Clickable {
     public override void OnClick(int mouseButton) {
         if (mouseButton == 0) {
             GameManager.instance.diskLvl++;
+            GameManager.instance.refreshMusic();
             Destroy(this.gameObject);
         }
     }

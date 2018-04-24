@@ -18,7 +18,7 @@ public class LockPickable : MonoBehaviour {
     }
 
     public void TryUnlock(Animator cadeado) {
-        if (GameManager.instance.lockpickLvl == lvl) {
+        if (GameManager.instance.lockpickLvl >= lvl) {
             item.Unlock();
             item.OnUnlock();
             cadeado.SetTrigger("Fly");

@@ -7,13 +7,13 @@ public class Chest : Interactable {
     public LockPickable lockScript;
     public Animator tampa;
     public Animator cadeado, ferro;
-
-    void Awake() {
+    public bool isFree;
+        void Awake() {
         lockScript = this.GetComponent<LockPickable>();
         if (lockScript != null)
             lockScript.item = this;
 
-        //locked = true;
+        locked = !isFree;
     }
 
 	// Use this for initialization

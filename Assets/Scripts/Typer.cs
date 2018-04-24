@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Typer : Clickable {
 
@@ -20,9 +21,16 @@ public class Typer : Clickable {
 	
 	// Update is called once per frame
 	void Update () {
-        if (index == 4)
-            Debug.Log("Fim");
+        if (index == 4){
+            GameManager.instance.cam.changeTarget(FocusTarget.main);
+            Invoke("EndGame", 10.0f);
+            GameManager.instance.sala.SetTrigger("Trigger");
+        }
 	}
+
+    void EndGame(){
+        SceneManager.LoadScene("Menu");
+    }
 
     public override void OnClick(int mouseButton) {
         if (mouseButton == 0 && !ctrl) {
