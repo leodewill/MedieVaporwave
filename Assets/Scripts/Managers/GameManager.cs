@@ -22,6 +22,7 @@ public class GameManager : MonoBehaviour {
         else
             Destroy(this.gameObject);
 
+        cam.transform.eulerAngles = Vector3.zero;
         if (cutscene) {
             for (int i = 0; i < lights.Length/2; i++) {
                 lights[2 * i].color = colors[8];
