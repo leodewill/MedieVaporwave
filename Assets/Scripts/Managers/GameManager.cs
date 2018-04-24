@@ -9,13 +9,15 @@ public class GameManager : MonoBehaviour {
     public static bool paused = false;
     public Light[] lights;
     public Color[] colors;
+    public Book holdBook = null;
     [Space(10)]
     public int lockpickLvl = 0;
     public int diskLvl = 0;
     Menu menu;
-    public GameObject menuInGame;
+    public GameObject menuInGame, gate;
     public Animator fist;
     public bool cutscene;
+
     void Awake() {
         if (instance == null)
             instance = this;
@@ -62,5 +64,9 @@ public class GameManager : MonoBehaviour {
     public void startGame() {
         cam.GetComponent<Raycaster>().enabled = true;
         cam.GetComponent<FreeLookCam>().enabled = true;
+    }
+
+    public void openGate() {
+        Destroy(gate);
     }
 }

@@ -13,7 +13,7 @@ public class Chest : Interactable {
         if (lockScript != null)
             lockScript.item = this;
 
-        locked = true;
+        //locked = true;
     }
 
 	// Use this for initialization
@@ -23,7 +23,8 @@ public class Chest : Interactable {
 	void Update () { }
 
     public override void OnLocked() {
-        lockScript.TryUnlock(cadeado);
+        if (lockScript != null)
+            lockScript.TryUnlock(cadeado);
     }
 
     public override void OnUnlock() {

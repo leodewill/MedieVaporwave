@@ -8,6 +8,7 @@ public class Moldura : Interactable {
     public Animator cadeado;
     public Mesa mesa;
     public int lvl;
+    public PaintCadeado disk;
     void Awake() {
         lockScript = this.GetComponent<LockPickable>();
         if (lockScript != null)
@@ -31,8 +32,11 @@ public class Moldura : Interactable {
     }
 
     public override void Interact() {
-        if (GameManager.instance.diskLvl >= lvl)
+        if (GameManager.instance.diskLvl >= lvl) {
             mesa.turnOn();
+            GameManager.instance.diskLvl++;
+            disk.fly();
+        }
     }
 
     public override void Close() {
